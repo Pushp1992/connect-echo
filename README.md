@@ -32,21 +32,14 @@ ___
 
 Run `npm install`
 
-# On developement machine:
-
-Execute the following command to run the application (client + server)
-`npm run start`
+# To run this application
 ___
 
-On prod machine:
- Run the following command
+Run `npm run start`
 
-`npm run prod`
-
-DEV config:
-`Create a .env file in the root directory of the project. Add environment-specific variables on new lines in the form of NAME=VALUE`
-`Use PROD config mentioned above for reference or you can leave it blank for the time being if you do not have any hard core dependency` 
-
+# To create production build
 ___
+
+Run `npm run prod`
 
 
