@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
     pencil: {
         padding: theme.spacing(2),
-        textAlign: 'right',
+        textAlign: 'center',
         position: 'relative',
         color: theme.palette.text.secondary,
     },
@@ -79,8 +79,8 @@ export function NavBar() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-
                     <Paper className={classes.paper}>
+                    <img src="https://global-uploads.webflow.com/5d256c74852a390a60998230/5db13a2ff782f969a0559b2b_conlogo.svg" style={{width: '200px', height: '39px', textAlign: 'right', paddingRight: '3px'}} /> {" "} {" "}
                         <Button aria-controls="customized-menu" aria-haspopup="true" variant="contained" color="primary" onClick={handleClick}>
                             Open Menu
                         </Button>
