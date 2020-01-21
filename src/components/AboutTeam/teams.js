@@ -1,16 +1,12 @@
 import React from 'react';
-import { Fade } from "react-slideshow-image";
-
+import { Zoom } from "react-slideshow-image";
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
 import memberDetails from '../../utils/membersProfile';
 import { NavBar } from '../navBar/navBar';
 import './team.scss';
@@ -32,8 +28,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const fadeProperties = {
-    duration: 5000,
+const zoomOutProperties = {
+    duration: 4000,
     transitionDuration: 500,
     infinite: false,
     indicators: true,
@@ -51,13 +47,13 @@ const Slideshow = () => {
             <NavBar />
             <br /> <br />
             <div className="slide-container">
-                <Fade {...fadeProperties}>
+                <Zoom {...zoomOutProperties}>
                     {
                         memberDetails.map(data => {
                             return (
                                 <Grid container wrap='nowrap' spacing={0}>
                                     <Grid item xs={4}>
-                                        <Card className={classes.card} style={{ textAlign: 'left'}}>
+                                        <Card className={classes.card} style={{ textAlign: 'left' }}>
                                             <CardActionArea>
                                                 <CardContent>
                                                     <Typography gutterBottom variant="h5" component="h2">
@@ -93,7 +89,7 @@ const Slideshow = () => {
                             )
                         })
                     }
-                </Fade>
+                </Zoom>
             </div>
         </React.Fragment>
     )

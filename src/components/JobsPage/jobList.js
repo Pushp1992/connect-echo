@@ -42,7 +42,7 @@ export default function JobList() {
                 <td></td>
                 <td></td>
                 <Card className={classes.card}>
-                    <CardActionArea  style={{backgroundColor: "whitesmoke"}}>
+                    <CardActionArea style={{ backgroundColor: "whitesmoke" }}>
                         <CardMedia
                             className={classes.media}
                             image="/image"

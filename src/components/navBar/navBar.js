@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
@@ -12,7 +11,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -20,15 +18,8 @@ const useStyles = makeStyles(theme => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: 'right',
-        // backgroundColor: "rgba(41, 39, 39, 0.938)",
         color: theme.palette.text.secondary,
-    },
-    pencil: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        position: 'relative',
-        color: theme.palette.text.secondary,
-    },
+    }
 }));
 
 // For Menu
@@ -65,8 +56,8 @@ const StyledMenuItem = withStyles(theme => ({
 
 export function NavBar() {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = event => {
         setAnchorEl(event.currentTarget);
     };
@@ -80,7 +71,7 @@ export function NavBar() {
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
-                    <img src="https://global-uploads.webflow.com/5d256c74852a390a60998230/5db13a2ff782f969a0559b2b_conlogo.svg" style={{width: '200px', height: '39px', textAlign: 'right', paddingRight: '3px'}} /> {" "} {" "}
+                        <img src="https://global-uploads.webflow.com/5d256c74852a390a60998230/5db13a2ff782f969a0559b2b_conlogo.svg" style={{ width: '200px', height: '39px', textAlign: 'right', paddingRight: '3px' }} /> {" "} {" "}
                         <Button aria-controls="customized-menu" aria-haspopup="true" variant="contained" color="primary" onClick={handleClick}>
                             Open Menu
                         </Button>
@@ -103,8 +94,6 @@ export function NavBar() {
                             </StyledMenuItem>
                         </StyledMenu>
                     </Paper>
-
-                    {/* <Paper className={classes.pencil}>right</Paper> */}
                 </Grid>
             </Grid>
         </div>
